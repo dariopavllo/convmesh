@@ -42,7 +42,7 @@ python run_generation.py --name pretrained_p3d_512x512_uncond --dataset p3d --gp
 You can of course adjust the number of GPUs and batch size to suit your computational resources. For evaluation, 16 elements per GPU is a sensible choice. You can also tune the number of data-loading threads using the `--num_workers` argument (default: 4 threads). If unspecified, the truncation sigma for evaluation is autodetected depending on the dataset. In case you want to specify it manually, you can do so through the `--truncation_sigma` argument (e.g. to disable truncation, specify a large value like 1000).
 
 The table below summarizes the FID scores you can expect when evaluating the pretrained models:
-| Dataset | Split | Texture resolution | Conditioning |  FID (Full) | $$\sigma$$ |
+| Dataset | Split | Texture resolution | Conditioning |  FID (Full) | σ |
 |:-------|:-------:|:-------:|:-------:|:-------:|:-------:|
 | CUB Birds | testval  | 512 x 512 | Class | ~33 | 0.25 |
 | CUB Birds | testval  | 512 x 512 | Text | ~18 | 0.5 |

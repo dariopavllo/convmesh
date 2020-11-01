@@ -446,7 +446,10 @@ def update_generator_running_avg(epoch):
             alpha = args.g_running_average_alpha
         g_state_dict = generator.state_dict()
         for k, param in generator_running_avg.state_dict().items():
-            param.mul_(alpha).add_(g_state_dict[k], alpha=1-alpha)
+            if torch.is_floating_point(param):
+                param.mul_(alpha).add_(g_state_dict[k], alpha=1-alpha)
+            else:
+                param.fill_(g_state_dict[k])
 
 class ModelWrapper(nn.Module):
     
