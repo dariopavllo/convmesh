@@ -6,6 +6,8 @@ This is the reference implementation of "Convolutional Generation of Textured 3D
 
 The paper proposes a novel GAN framework for generating 3D triangle meshes and corresponding texture maps, leveraging recent advances in differentiable rendering. The model can be conditioned on a variety of inputs, including class labels, attributes, and text via an attention mechanism.
 
+**Update:** our follow-up work [Learning Generative Models of Textured 3D Meshes from Real-World Images](https://github.com/dariopavllo/textured-3d-gan) was accepted in ICCV 2021. It extends this work by relaxing the requirement for keypoints and generalizing the approach to unannotated datasets such as ImageNet. Check out our [repository](https://github.com/dariopavllo/textured-3d-gan)!
+
 ![](images/teaser.jpg)
 <img src="images/animation.gif" width="768px" alt="" />
 
